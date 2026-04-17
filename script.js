@@ -27,50 +27,6 @@ document.querySelectorAll('a[href^=\"#\"]').forEach(anchor => {
   });
 });
 
-// Dark/Light mode toggle
-const modeToggle = document.querySelector('.mode-toggle');
-const sunIcon = document.querySelector('#sun-icon');
-const moonIcon = document.querySelector('#moon-icon');
-const body = document.body;
-
-function setTheme(theme) {
-  body.setAttribute('data-theme', theme);
-  localStorage.setItem('theme', theme);
-  // Force repaint
-  body.classList.add('theme-updated');
-  setTimeout(() => body.classList.remove('theme-updated'), 100);
-  body.offsetHeight; // trigger reflow
-  console.log('Theme set to:', theme);
-  
-  
-  if (theme === 'dark') {
-    moonIcon.classList.add('active');
-    sunIcon.classList.remove('active');
-  } else {
-    sunIcon.classList.add('active');
-    moonIcon.classList.remove('active');
-  }
-}
-
-if (!modeToggle) {
-  console.error('Mode toggle not found');
-  return;
-}
-modeToggle.addEventListener('click', () => {
-  console.log('Mode toggle clicked');
-
-  const currentTheme = body.getAttribute('data-theme') || 'light';
-  setTheme(currentTheme === 'light' ? 'dark' : 'light');
-});
-
-// Load saved theme
-const savedTheme = localStorage.getItem('theme') || 'light';
-console.log('Loading saved theme:', savedTheme);
-if (!sunIcon || !moonIcon) {
-  console.warn('Theme icons not found, skipping icon update');
-}
-setTheme(savedTheme);
-
 // Intersection Observer for scroll animations
 const observerOptions = {
   threshold: 0.1,
@@ -100,13 +56,12 @@ contactForm.addEventListener('submit', function(e) {
   e.preventDefault();
   
   // Simple client-side validation
-  const name = this.querySelector('input[type=\"text\"]').value;
-  const email = this.querySelector('input[type=\"email\"]').value;
+  const name = this.querySelector('input[type="text"]').value;
+  const email = this.querySelector('input[type="email"]').value;
   const message = this.querySelector('textarea').value;
   
   if (name && email && message) {
-    // Here you would typically send to a backend service like EmailJS or Formspree
-    alert('Thank you ' + name + '! Your message has been sent. Ill get back to you soon!');
+    alert('Thank you ' + name + '! Your message has been sent. I\\'ll get back to you soon!');
     this.reset();
   } else {
     alert('Please fill in all fields.');
@@ -136,4 +91,3 @@ window.addEventListener('scroll', () => {
   
   lastScrollY = window.scrollY;
 });
-

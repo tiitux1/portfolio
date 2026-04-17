@@ -11,15 +11,7 @@
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-[data-theme="dark"] {
-  --text-primary: #f8fafc;
-  --text-secondary: #cbd5e1;
-  --bg-primary: #0f172a;
-  --bg-secondary: #1e293b;
-  --glass-bg: rgba(15, 23, 42, 0.8);
-  --shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.3);
-  --border: rgba(148, 163, 184, 0.2);
-}
+
 
 * {
   margin: 0;
@@ -105,27 +97,7 @@ body {
   width: 100%;
 }
 
-.mode-toggle {
-  display: flex;
-  gap: 0.5rem;
-  cursor: pointer;
-  padding: 0.5rem;
-  border-radius: 50px;
-  backdrop-filter: blur(10px);
-  border: 1px solid var(--border);
-  transition: var(--transition);
-}
 
-.mode-icon {
-  font-size: 1.2rem;
-  transition: var(--transition);
-  opacity: 0.5;
-}
-
-.mode-icon.active {
-  opacity: 1;
-  transform: scale(1.1);
-}
 
 .menu-toggle {
   display: none;

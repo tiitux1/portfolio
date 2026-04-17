@@ -1,18 +1,14 @@
-# Portfolio Fixes TODO - COMPLETED
+# Portfolio Updates
 
-## Completed Steps:
+## New Changes (User Request):
 
-- [x] Step 1: Updated index.html ✓
-  - Added ids to mode icons
-  - Fixed Project 2 image URL (coffee shop)
-  - Removed social links from contact (email/phone only)
+- [ ] Remove dark mode completely:
+  - Delete .mode-toggle from index.html
+  - Remove dark mode CSS [data-theme="dark"]
+  - Remove dark mode JS code
 
-- [x] Step 2: Updated script.js ✓
-  - #sun-icon/#moon-icon selectors + null checks/logs
-  - Repaint logic for theme changes
-  - Console debugging added
+- [ ] Remove project images:
+  - Delete <img> from all 3 project-cards in index.html
+  - Adjust .project-card CSS if needed
 
-## Remaining:
-- [ ] Step 3: Test - Open browser with `start index.html`, F12 console, toggle dark mode (check logs/colors/icons), verify images/contact
-
-- [x] Step 4: All syntax errors fixed, features working
+- [ ] Test: Simple light theme portfolio with text-only projects, contact simplified
