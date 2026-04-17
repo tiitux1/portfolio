@@ -29,13 +29,19 @@ document.querySelectorAll('a[href^=\"#\"]').forEach(anchor => {
 
 // Dark/Light mode toggle
 const modeToggle = document.querySelector('.mode-toggle');
-const sunIcon = document.querySelector('.sun');
-const moonIcon = document.querySelector('.moon');
+const sunIcon = document.querySelector('#sun-icon');
+const moonIcon = document.querySelector('#moon-icon');
 const body = document.body;
 
 function setTheme(theme) {
   body.setAttribute('data-theme', theme);
   localStorage.setItem('theme', theme);
+  // Force repaint
+  body.classList.add('theme-updated');
+  setTimeout(() => body.classList.remove('theme-updated'), 100);
+  body.offsetHeight; // trigger reflow
+  console.log('Theme set to:', theme);
+  
   
   if (theme === 'dark') {
     moonIcon.classList.add('active');
@@ -46,13 +52,23 @@ function setTheme(theme) {
   }
 }
 
+if (!modeToggle) {
+  console.error('Mode toggle not found');
+  return;
+}
 modeToggle.addEventListener('click', () => {
+  console.log('Mode toggle clicked');
+
   const currentTheme = body.getAttribute('data-theme') || 'light';
   setTheme(currentTheme === 'light' ? 'dark' : 'light');
 });
 
 // Load saved theme
 const savedTheme = localStorage.getItem('theme') || 'light';
+console.log('Loading saved theme:', savedTheme);
+if (!sunIcon || !moonIcon) {
+  console.warn('Theme icons not found, skipping icon update');
+}
 setTheme(savedTheme);
 
 // Intersection Observer for scroll animations
@@ -90,7 +106,7 @@ contactForm.addEventListener('submit', function(e) {
   
   if (name && email && message) {
     // Here you would typically send to a backend service like EmailJS or Formspree
-    alert('Thank you ' + name + '! Your message has been sent. I'll get back to you soon!');
+    alert('Thank you ' + name + '! Your message has been sent. Ill get back to you soon!');
     this.reset();
   } else {
     alert('Please fill in all fields.');
