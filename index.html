@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tiitus Portfolio - Video Editor & Web Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">Tiitus</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mode-toggle">
+                <span class="mode-icon sun">☀️</span>
+                <span class="mode-icon moon">🌙</span>
+            </div>
+            <div class="menu-toggle">☰</div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Hi, I'm <span class="gradient-text">Tiitus</span></h1>
+            <p class="hero-subtitle">Video Editor &amp; Web Developer creating engaging content and websites.</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">View Work</a>
+                <a href="#contact" class="btn btn-secondary">Contact Me</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="image-placeholder"></div>
+        </div>
+    </section>
+
+    <section id="about" class="section about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>Passionate video editor and web developer. I create dynamic montages from student games and build functional websites like coffee shop sites and car model finders.</p>
+                    <p>Expertise in video production, web development, and databases.</p>
+                </div>
+                <div class="skills">
+                    <h3>Skills</h3>
+                    <div class="skills-list">
+                        <span class="skill-tag">HTML/CSS/JS</span>
+                        <span class="skill-tag">Video Editing</span>
+                        <span class="skill-tag">Web Development</span>
+                        <span class="skill-tag">Databases</span>
+                        <span class="skill-tag">Responsive Design</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1000&amp;q=80" alt="Project 1">
+                    </div>
+                    <div class="project-info">
+                        <h3>Students Games Montage</h3>
+                        <p>Video editing project - dynamic montage created from students games footage.</p>
+                        <div class="project-links">
+                            <a href="#" class="link">Demo Video</a>
+                            <a href="#" class="link">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1559028005-22559749a282?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1000&amp;q=80" alt="Project 2">
+                    </div>
+                    <div class="project-info">
+                        <h3>Coffee Website (KahvilaSivusto)</h3>
+                        <p>Modern coffee shop website showcasing products and services.</p>
+                        <div class="project-links">
+                            <a href="https://kahvilasivusto.tiitux1.repl.co/" class="link">Live Demo</a>
+                            <a href="https://github.com/tiitux1/KahvilaSivusto" class="link">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1000&amp;q=80" alt="Project 3">
+                    </div>
+                    <div class="project-info">
+                        <h3>Volkswagen Model Finder (vwsivusto)</h3>
+                        <p>Interactive Volkswagen model finder website with database integration.</p>
+                        <div class="project-links">
+                            <a href="https://vwsivusto.tiitux1.repl.co/" class="link">Live Demo</a>
+                            <a href="https://github.com/tiitux1/vwsivusto" class="link">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Let's work together!</h3>
+                    <p>tiitus@outlook.com</p>
+                    <p>044 2305463</p>
+                    <div class="social-links">
+                        <a href="#"><i>📘</i> GitHub</a>
+                        <a href="#"><i>💼</i> LinkedIn</a>
+                        <a href="#"><i>✉️</i> Email</a>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&amp;copy; 2024 Tiitus. Built with modern web technologies.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
