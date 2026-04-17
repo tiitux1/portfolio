@@ -61,7 +61,7 @@ contactForm.addEventListener('submit', function(e) {
   const message = this.querySelector('textarea').value;
   
   if (name && email && message) {
-    alert('Thank you ' + name + '! Your message has been sent. I\\'ll get back to you soon!');
+    alert('Thank you ' + name + '! Your message has been sent. Ill get back to you soon!');
     this.reset();
   } else {
     alert('Please fill in all fields.');
